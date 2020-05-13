@@ -53,5 +53,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "tui-date-picker": "^4.1.0"
+  }
 }
