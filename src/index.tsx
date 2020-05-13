@@ -1,16 +1,18 @@
+/* eslint-disable no-unused-vars */
 import * as React from 'react'
 import { useRef, useEffect, useState } from 'react'
-// eslint-disable-next-line no-unused-vars
 import DatePicker, { DatePickerOptions } from 'tui-date-picker'
 import 'tui-date-picker/dist/tui-date-picker.css'
+import 'tui-time-picker/dist/tui-time-picker.css'
 
 interface Props extends DatePickerOptions {
   date: Date
   format: string
+  onChange: Function
 }
 
 export const ExampleComponent = (props: Props) => {
-  const { date, format, showAlways, timePicker } = props
+  const { date, format, showAlways, timePicker, onChange } = props
   const tuiWrapperRef = useRef(null)
   const tuiInputRef = useRef(null)
   const [tui, setTui] = useState<DatePicker>()
@@ -27,6 +29,10 @@ export const ExampleComponent = (props: Props) => {
           timePicker: timePicker || false
         })
       )
+    } else {
+      tui.on('change', () =>
+        typeof onChange === 'function' ? onChange(tui.getDate()) : undefined
+      )
     }
     return () => {
       if (tui !== undefined) {
@@ -37,7 +43,12 @@ export const ExampleComponent = (props: Props) => {
   return (
     <div>
       <div className='tui-datepicker-input tui-datetime-input tui-has-focus'>
-        <input type='text' ref={tuiInputRef} id='datepicker-input' />
+        <input
+          type='text'
+          ref={tuiInputRef}
+          id='datepicker-input'
+          aria-label='Date-Time'
+        />
         <span className='tui-ico-date' />
       </div>
       <div id='wrapper' ref={tuiWrapperRef} />
