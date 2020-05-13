@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { ExampleComponent } from 'tui.date-picker-react'
+import { TuiDatePicker } from 'tui.date-picker-react'
 // import 'tui.date-picker-react/dist/index.css'
 
 const App = () => {
   return (
-    <ExampleComponent
+    <TuiDatePicker
       date={new Date()}
       format='yyyy/MM/dd HH:mm'
       timePicker={{
@@ -13,6 +13,7 @@ const App = () => {
         inputType: 'spinbox'
       }}
       onChange={e => console.log(e)}
+      language="ko"
     />
   )
 }

@@ -9,10 +9,19 @@ interface Props extends DatePickerOptions {
   date: Date
   format: string
   onChange: Function
+  style: React.CSSProperties
 }
 
-export const ExampleComponent = (props: Props) => {
-  const { date, format, showAlways, timePicker, onChange } = props
+export const TuiDatePicker = (props: Props) => {
+  const {
+    date,
+    format,
+    showAlways,
+    timePicker,
+    onChange,
+    style,
+    language
+  } = props
   const tuiWrapperRef = useRef(null)
   const tuiInputRef = useRef(null)
   const [tui, setTui] = useState<DatePicker>()
@@ -26,7 +35,8 @@ export const ExampleComponent = (props: Props) => {
             format: format || 'yyyy-MM-dd'
           },
           showAlways: showAlways || false,
-          timePicker: timePicker || false
+          timePicker: timePicker || false,
+          language: language
         })
       )
     } else {
@@ -41,7 +51,7 @@ export const ExampleComponent = (props: Props) => {
     }
   })
   return (
-    <div>
+    <div style={style}>
       <div className='tui-datepicker-input tui-datetime-input tui-has-focus'>
         <input
           type='text'
