@@ -5,10 +5,10 @@
   "author": {
     "name": "100milliongold",
     "email": "gadian88@gmail.com",
-    "url": "https://github.com/100milliongold/tui.date-picker-react"
+    "url": "https://github.com/100milliongold/tui-date-picker-react"
   },
   "license": "MIT",
-  "repository": "https://github.com/100milliongold/tui.date-picker-react",
+  "repository": "https://github.com/100milliongold/tui-date-picker-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -16,7 +16,7 @@
     "node": ">=10"
   },
   "bugs": {
-    "url": "https://github.com/100milliongold/tui.date-picker-react",
+    "url": "https://github.com/100milliongold/tui-date-picker-react",
     "email": "gadian88@gmail.com"
   },
   "scripts": {

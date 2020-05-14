@@ -1,13 +1,14 @@
 {
-  "name": "tui.date-picker-react-example",
-  "homepage": "https://Jea-Eok-Kim.github.io/tui.date-picker-react",
-  "version": "0.0.0",
+  "name": "tui-date-picker-react-example",
+  "homepage": "https://100milliongold.github.io/tui-date-picker-react",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.14",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "file:../node_modules/react-scripts",
-    "tui.date-picker-react": "file:.."
+    "tui-date-picker-react": "file:.."
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
