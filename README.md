@@ -1,8 +1,8 @@
-# tui.date-picker-react
+# TOAST UI React Component : Date Picker
 
-> Made with create-react-library
+> Made with create-react-library for [TOAST UI Component : Date Picker](https://github.com/nhn/tui.date-picker#readme)
 
-[![NPM](https://img.shields.io/npm/v/tui.date-picker-react.svg)](https://www.npmjs.com/package/tui.date-picker-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/tui.date-picker-react.svg)](https://www.npmjs.com/package/tui-date-picker-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
