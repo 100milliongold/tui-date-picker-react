@@ -12,9 +12,9 @@ npm install --save tui.date-picker-react
 
 ## Usage
 
+### Date Picker
 ```tsx
 import React, { Component } from 'react'
-
 import TuiDatePicker from 'tui.date-picker-react'
 
 class Example extends Component {
@@ -30,6 +30,32 @@ class Example extends Component {
       language="ko"
     />
   }
+}
+```
+
+
+### Date Range Picker
+```tsx
+import React, { Component } from 'react'
+import { TuiDateRangePicker } from 'tui.date-picker-react'
+
+const App = () => {
+  return (
+    <TuiDateRangePicker
+      onChangeEndDate={([startDate, endDate]) =>
+        console.log(startDate, endDate)
+      }
+      onChangeStartDate={([startDate, endDate]) =>
+        console.log(startDate, endDate)
+      }
+      language='ko'
+      format='yyyy/MM/dd HH:mm'
+      timePicker={{
+        layoutType: 'tab',
+        inputType: 'spinbox'
+      }}
+    />
+  )
 }
 ```
 

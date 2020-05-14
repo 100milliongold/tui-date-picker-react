@@ -1,6 +1,6 @@
-import { TuiDatePicker } from '../'
+import TuiDatePicker from '../'
 
-describe('ExampleComponent', () => {
+describe('TuiDatePicker', () => {
   it('is truthy', () => {
     expect(TuiDatePicker).toBeTruthy()
   })
