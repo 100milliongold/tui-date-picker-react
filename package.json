@@ -1,8 +1,8 @@
 {
   "name": "tui.date-picker-react",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "React plugin for tui-date-picker",
-  "author": "Jea-Eok-Kim",
+  "author": "100milliongold",
   "license": "MIT",
   "repository": "",
   "main": "dist/index.js",
