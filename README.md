@@ -15,16 +15,24 @@ npm install --save tui.date-picker-react
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'tui.date-picker-react'
-import 'tui.date-picker-react/dist/index.css'
+import TuiDatePicker from 'tui.date-picker-react'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <TuiDatePicker
+      date={new Date()}
+      format='yyyy/MM/dd HH:mm'
+      timePicker={{
+        layoutType: 'tab',
+        inputType: 'spinbox'
+      }}
+      onChange={e => console.log(e)}
+      language="ko"
+    />
   }
 }
 ```
 
 ## License
 
-MIT © [Jea-Eok-Kim](https://github.com/Jea-Eok-Kim)
+MIT © [100milliongold](https://github.com/100milliongold)

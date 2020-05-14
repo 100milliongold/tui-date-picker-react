@@ -65,3 +65,5 @@ export const TuiDatePicker = (props: Props) => {
     </div>
   )
 }
+
+export default TuiDatePicker
