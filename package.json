@@ -66,5 +66,13 @@
     "babel-loader": "^8.1.0",
     "tui-date-picker": "^4.1.0",
     "tui-time-picker": "^2.0.3"
-  }
+  },
+  "keywords": [
+    "tui",
+    "component",
+    "calendardate-picker",
+    "date-range-picker",
+    "tui-date-picker",
+    "react"
+  ]
 }
