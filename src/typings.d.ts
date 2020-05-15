@@ -40,8 +40,7 @@ interface TuiDateRangePickerProps extends DateRangePickerOptions {
   to: React.Component
   language: string = 'en'
   style: React.CSSProperties
-  onChangeEndDate: Function
-  onChangeStartDate: Function
+  onChange: Function
 }
 
 interface TimePickerOption {

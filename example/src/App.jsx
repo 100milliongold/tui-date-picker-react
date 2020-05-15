@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   form: {
     width: '100%',
@@ -25,20 +25,35 @@ const App = () => {
     <Container component='main' maxWidth='xl'>
       <CssBaseline />
       <div className={classes.paper}>
-        <Typography component='h1' variant='h5'>
+        <Typography component='h1' variant='h4'>
           TOAST UI React Component : Date Picker
         </Typography>
         <div className={classes.paper}>
-          <TuiDatePicker
-            date={new Date()}
-            format='yyyy/MM/dd HH:mm'
-            timePicker={{
-              layoutType: 'tab',
-              inputType: 'spinbox'
-            }}
-            onChange={(e) => console.log(e)}
-            language='ko'
-          />
+          <Typography component='h2' variant='h5'>
+            Example 1 Basic
+          </Typography>
+          <code>{`<TuiDatePicker
+              date={new Date()}
+              format='yyyy/MM/dd HH:mm'
+              timePicker={{
+                layoutType: 'tab',
+                inputType: 'spinbox'
+              }}
+              onChange={(e) => console.log(e)}
+              language='ko'
+            />`}</code>
+          <div>
+            <TuiDatePicker
+              date={new Date()}
+              format='yyyy/MM/dd HH:mm'
+              timePicker={{
+                layoutType: 'tab',
+                inputType: 'spinbox'
+              }}
+              onChange={(e) => console.log(e)}
+              language='ko'
+            />
+          </div>
         </div>
         <div className={classes.paper}>
           <TuiDateRangePicker

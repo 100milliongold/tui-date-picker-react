@@ -4,14 +4,7 @@ import DatePicker, { DateRangePicker } from 'tui-date-picker'
 import 'tui-date-picker/dist/tui-date-picker.css'
 import 'tui-time-picker/dist/tui-time-picker.css'
 const TuiDateRangePicker = (props: TuiDateRangePickerProps) => {
-  const {
-    today,
-    tomorrow,
-    to,
-    style,
-    onChangeEndDate,
-    onChangeStartDate
-  } = props
+  const { today, tomorrow, to, style, onChange } = props
   const [rangePicker, setRangePicker] = useState<DateRangePicker>()
   const startPickerContainerRef = useRef(null)
   const startPickerInputRef = useRef(null)
@@ -37,20 +30,16 @@ const TuiDateRangePicker = (props: TuiDateRangePickerProps) => {
         })
       )
     } else {
-      rangePicker.on('change:start', () => {
-        if (typeof onChangeStartDate === 'function')
-          onChangeStartDate([
-            rangePicker.getStartDate(),
-            rangePicker.getEndDate()
-          ])
-      })
-      rangePicker.on('change:end', () => {
-        if (typeof onChangeEndDate === 'function')
-          onChangeStartDate([
-            rangePicker.getStartDate(),
-            rangePicker.getEndDate()
-          ])
-      })
+      rangePicker.on('change:start', () =>
+        typeof onChange === 'function'
+          ? onChange([rangePicker.getStartDate(), rangePicker.getEndDate()])
+          : undefined
+      )
+      rangePicker.on('change:end', () =>
+        typeof onChange === 'function'
+          ? onChange([rangePicker.getStartDate(), rangePicker.getEndDate()])
+          : undefined
+      )
     }
 
     return () => {
