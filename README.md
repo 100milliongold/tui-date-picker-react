@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install --save tui.date-picker-react
+npm install --save tui-date-picker-react
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ npm install --save tui.date-picker-react
 
 ```tsx
 import React, { Component } from 'react'
-import TuiDatePicker from 'tui.date-picker-react'
+import { TuiDateRangePicker } from 'tui-date-picker-react'
 
 class Example extends Component {
   render() {
@@ -36,11 +36,11 @@ class Example extends Component {
 }
 ```
 
-
 ### Date Range Picker
+
 ```tsx
 import React, { Component } from 'react'
-import { TuiDateRangePicker } from 'tui.date-picker-react'
+import { TuiDateRangePicker } from 'tui-date-picker-react'
 
 const App = () => {
   return (
