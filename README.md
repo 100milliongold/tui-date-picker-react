@@ -45,12 +45,8 @@ import { TuiDateRangePicker } from 'tui-date-picker-react'
 const App = () => {
   return (
     <TuiDateRangePicker
-      onChangeEndDate={([startDate, endDate]) =>
-        console.log(startDate, endDate)
-      }
-      onChangeStartDate={([startDate, endDate]) =>
-        console.log(startDate, endDate)
-      }
+      onChange={([startDate, endDate]) =>
+        console.log(startDate, endDate)}
       language='ko'
       format='yyyy/MM/dd HH:mm'
       timePicker={{
